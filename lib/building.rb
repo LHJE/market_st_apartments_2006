@@ -10,12 +10,14 @@ class Building
               :bedrooms,
               :unit_info,
               :renter,
-              :name
+              :name,
+              :building
 
 
 
   def initialize
     @units = []
+    @unit_total = []
   end
 
 
@@ -25,10 +27,8 @@ class Building
 
 
   def renters
-    building.units.each do |tenet|
-      tenets += tenet[0]
+    @building.units.each do |tenet|
+      tenet.name
     end
-    tenets
-
   end
 end
