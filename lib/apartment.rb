@@ -13,11 +13,23 @@ class Apartment
 
   def initialize(unit_info, renter = [])
     @unit_info = unit_info
-    @number = number
-    @monthly_rent = monthly_rent
-    @bathrooms = bathrooms
-    @bedrooms = bedrooms
     @renter = []
+  end
+
+  def number
+    @number = unit_info[:number]
+  end
+
+  def monthly_rent
+    @monthly_rent = unit_info[:monthly_rent]
+  end
+
+  def bathrooms
+    @bathrooms = unit_info[:bathrooms]
+  end
+
+  def bedrooms
+    @bedrooms = unit_info[:bedrooms]
   end
 
   def add_renter(renter_name)
