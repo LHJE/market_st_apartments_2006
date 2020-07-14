@@ -14,7 +14,11 @@ class ApartmentTest < Minitest::Test
   end
 
 
+  def test_it_has_unit_info
+    unit1 = Apartment.new({number: "A1", monthly_rent: 1200, bathrooms: 1, bedrooms: 1})
 
+    assert_equal ({number: "A1", monthly_rent: 1200, bathrooms: 1, bedrooms: 1}), unit1.unit_info
+  end
 
 
 
