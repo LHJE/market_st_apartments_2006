@@ -4,20 +4,12 @@ require './lib/apartment'
 class Building
 
   attr_reader :units,
-              :number,
-              :monthly_rent,
-              :bathrooms,
-              :bedrooms,
-              :unit_info,
-              :renter,
-              :name,
               :building
 
 
 
   def initialize
     @units = []
-    @unit_total = []
   end
 
 
@@ -25,10 +17,18 @@ class Building
     @units << unit
   end
 
+  def units
+    @units
+  end
+
+
+# I get that this this is somehow supposed to access the first object in the units array, but I just can't figure out how.     @building.units.????.renter?
+# It's either that or something like what I've got below, but it keeps saying it doesn't recognize 'units' or 'name'
 
   def renters
-    @building.units.each do |tenet|
-      tenet.name
+    units.each do |tenet|
+      tenet.renter[0]
     end
+    #gah.  Why is this just giving me exactly what .units is giving me?
   end
 end

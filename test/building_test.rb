@@ -36,7 +36,7 @@ class BuildingTest < Minitest::Test
     building.add_unit(unit2)
     unit1.add_renter(renter1)
     unit2.add_renter(renter2)
-    # require 'pry'; binding.pry
+    require 'pry'; binding.pry
     assert_equal ["Aurora", "Tim"], building.renters
   end
 
