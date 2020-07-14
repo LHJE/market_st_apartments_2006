@@ -3,7 +3,14 @@ require './lib/apartment'
 
 class Building
 
-  attr_reader :units
+  attr_reader :units,
+              :number,
+              :monthly_rent,
+              :bathrooms,
+              :bedrooms,
+              :unit_info,
+              :renter,
+              :name
 
 
 
@@ -14,5 +21,14 @@ class Building
 
   def add_unit(unit)
     @units << unit
+  end
+
+
+  def renters
+    building.units.each do |tenet|
+      tenets += tenet[0]
+    end
+    tenets
+
   end
 end

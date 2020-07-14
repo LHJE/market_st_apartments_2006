@@ -7,7 +7,8 @@ class Apartment
               :bathrooms,
               :bedrooms,
               :unit_info,
-              :renter
+              :renter,
+              :name
 
 
 
